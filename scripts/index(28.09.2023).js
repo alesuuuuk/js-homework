@@ -69,9 +69,9 @@
 // }
 
 // // task ten
-let checkOddEven = (number) =>{
-    number % 2 == 0 ? alert(`${number} - парне`) : alert(`${number} - непарне`)
-}
+// let checkOddEven = (number) =>{
+//     number % 2 == 0 ? alert(`${number} - парне`) : alert(`${number} - непарне`)
+// }
 
-let userInputNumber = prompt("Введіть число")
-checkOddEven(userInputNumber)
+// let userInputNumber = prompt("Введіть число")
+// checkOddEven(userInputNumber)
