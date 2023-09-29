@@ -1,0 +1,53 @@
+.progress__bar {
+    width: 500px;
+    height: 8px;
+    background-color: lightgrey;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.progress__bar_filed {
+    transition: 2s;
+    width: 20%;
+    height: 8px;
+    background-color: orange;
+    border-radius: 15px;
+}
+
+.form__quetions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form__quetions_age {
+    text-align: center;
+    
+}
+
+.age-inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form__quetions_age_st, #form__quetions_age_nd, #form__quetions_age_rd{
+    width: 470px;
+    border: 10px;
+    height: 50px;
+    background-color: orange;
+    border-radius: 7px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+
+}
