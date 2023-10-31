@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <title>just dz</title>
     <link rel="stylesheet" href="/style/index.css" />
   </head>
-  <body> -->
+  <body>
     <!-- task one -->
     <!-- <div name="task_one" class="slider-container">
       <input type="range" min="0" max="100" value="50" class="slider" />
@@ -68,15 +68,9 @@
   </body>
 </html> -->
 
+    <!-- task four  -->
 
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новини</title>
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -109,8 +103,7 @@
             background-color: #0056b3;
         }
     </style>
-</head>
-<body>
+
     <div class="news-container">
         <h1>Список новин</h1>
         <div class="news-item">Новина 1</div>
@@ -118,7 +111,7 @@
         <div class="news-item">Новина 3</div>
         <div class="news-item">Новина 4</div>
         <div class="news-item">Новина 5</div>
-        <!-- Кнопка для доповнення новин -->
+        
         <button id="load-more">Завантажити ще новини</button>
     </div>
 
@@ -126,14 +119,14 @@
         const newsContainer = document.querySelector('.news-container');
         const loadMoreButton = document.querySelector('#load-more');
 
-        // Масив з новими новинами (приклад)
+        
         const additionalNews = [
             'Додаткова новина 1',
             'Додаткова новина 2',
             'Додаткова новина 3',
         ];
 
-        // Функція для додавання нових новин до списку
+        
         function appendNews() {
             additionalNews.forEach(newsText => {
                 const newsItem = document.createElement('div');
@@ -143,18 +136,215 @@
             });
         }
 
-        // Додавання події для кнопки "Завантажити ще новини"
+       
         loadMoreButton.addEventListener('click', () => {
             appendNews();
-            loadMoreButton.style.display = 'none'; // Приховуємо кнопку після завантаження
+            loadMoreButton.style.display = 'none'; 
         });
 
-        // Відловлюємо момент, коли користувач доклав до кінця сторінки (до підвалу)
+        
         window.addEventListener('scroll', () => {
             if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
                 appendNews();
             }
         });
+    </script> -->
+    <!-- task five  -->
+    <!-- <h1>Генератор календаря</h1>
+    <p>Введіть номер місяця (1-12) та рік:</p>
+    <input type="text" id="month" placeholder="Місяць">
+    <input type="text" id="year" placeholder="Рік">
+    <button onclick="generateCalendar()">Генерувати</button>
+    <div id="calendar"></div>
+    <script>
+        function generateCalendar() {
+            var month = document.getElementById("month").value;
+            var year = document.getElementById("year").value;
+            var date = new Date(year, month - 1, 1);
+            var table = "<table border='1'><tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Нд</th></tr><tr>";
+
+           
+            for (var i = 0; i < date.getDay(); i++) {
+                table += "<td></td>";
+            }
+
+            while (date.getMonth() == month - 1) {
+                table += "<td>" + date.getDate() + "</td>";
+                if (date.getDay() === 0) {
+                    table += "</tr><tr>";
+                }
+                date.setDate(date.getDate() + 1);
+            }
+
+            
+            if (date.getDay() !== 0) {
+                for (var i = date.getDay(); i < 7; i++) {
+                    table += "<td></td>";
+                }
+            }
+            table += "</tr></table>";
+
+            document.getElementById("calendar").innerHTML = table;
+        }
+    </script> -->
+    <!-- task six -->
+    <!-- <style>
+        
+        .dotted-underline {
+            text-decoration: underline dotted;
+        }
+    </style>
+    <h1>Список посилань</h1>
+    <ul>
+        <li><a href="http://www.example.com">Посилання 1</a></li>
+        <li><a href="https://www.example.com">Посилання 2</a></li>
+        <li><a href="http://www.example2.com">Посилання 3</a></li>
+        <li><a href="https://www.example3.com">Посилання 4</a></li>
+    </ul>
+    <button onclick="setDottedUnderline()">Підкреслити пунктиром зовнішні посилання</button>
+    <script>
+        // Функція для встановлення підкреслення пунктиром для зовнішніх посилань
+        function setDottedUnderline() {
+            let links = document.getElementsByTagName("a");
+
+            for (let i = 0; i < links.length; i++) {
+                let href = links[i].getAttribute("href");
+
+                if (href && href.startsWith("http://")) {
+                    links[i].classList.add("dotted-underline");
+                }
+            }
+        }
+    </script> -->
+
+    <!-- task seven -->
+    <!-- <style>
+        .selected {
+            color: orange;
+        }
+    </style>
+    <h1>Список книг</h1>
+    <ul>
+        <li>Книга 1</li>
+        <li>Книга 2</li>
+        <li>Книга 3</li>
+        <li>Книга 4</li>
+        <li>Книга 5</li>
+        <li>Книга 6</li>
+    </ul>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const books = document.querySelectorAll("li");
+
+            let isCtrlPressed = false;
+            let isShiftPressed = false;
+            let lastClickedIndex = -1;
+
+            function toggleSelection(book) {
+                book.classList.toggle("selected");
+            }
+
+            function handleCtrlClick(book) {
+                isCtrlPressed = true;
+                toggleSelection(book);
+            }
+
+            function handleShiftClick(index) {
+                isShiftPressed = true;
+                if (lastClickedIndex !== -1) {
+                    const start = Math.min(index, lastClickedIndex);
+                    const end = Math.max(index, lastClickedIndex);
+                    books.forEach((book, i) => {
+                        if (i >= start && i <= end) {
+                            toggleSelection(book);
+                        }
+                    });
+                } else {
+                    toggleSelection(books[index]);
+                }
+            }
+
+            function handleRegularClick(index) {
+                if (!isCtrlPressed && !isShiftPressed) {
+                    books.forEach((book) => book.classList.remove("selected"));
+                    toggleSelection(books[index]);
+                }
+            }
+
+            books.forEach((book, index) => {
+                book.addEventListener("click", (event) => {
+                    if (event.ctrlKey) {
+                        handleCtrlClick(book);
+                    } else if (event.shiftKey) {
+                        handleShiftClick(index);
+                    } else {
+                        handleRegularClick(index);
+                    }
+                    lastClickedIndex = index;
+                });
+            });
+
+            document.addEventListener("keydown", (event) => {
+                if (event.key === "Control") {
+                    isCtrlPressed = true;
+                } else if (event.key === "Shift") {
+                    isShiftPressed = true;
+                }
+            });
+
+            document.addEventListener("keyup", (event) => {
+                if (event.key === "Control") {
+                    isCtrlPressed = false;
+                } else if (event.key === "Shift") {
+                    isShiftPressed = false;
+                    lastClickedIndex = -1;
+                }
+            });
+        });
+    </script> -->
+
+    <!-- task eight -->
+    <style>
+      .editable {
+        /* display: none; */
+      }
+    </style>
+
+    <h1>Редагування тексту</h1>
+    <div id="textDiv" class="editable">Це текст, який можна редагувати.</div>
+    <textarea id="textArea" class="editable"></textarea>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const textDiv = document.getElementById("textDiv");
+        const textArea = document.getElementById("textArea");
+
+        function showTextDiv() {
+          textDiv.style.display = "block";
+          textArea.style.display = "none";
+          textDiv.textContent = textArea.value;
+        }
+
+        function showTextArea() {
+          textDiv.style.display = "none";
+          textArea.style.display = "block";
+          textArea.value = textDiv.textContent;
+          textArea.focus();
+        }
+
+        document.addEventListener("keydown", function (event) {
+          if (event.ctrlKey && event.key === "E") {
+            event.preventDefault();
+            showTextArea();
+          } else if (event.ctrlKey && event.key === "S") {
+            event.preventDefault();
+            showTextDiv();
+          }
+        });
+
+        textArea.addEventListener("blur", function () {
+          showTextDiv();
+        });
+      });
     </script>
-</body>
+  </body>
 </html>
