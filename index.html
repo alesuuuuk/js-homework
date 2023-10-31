@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/index.css">
+    <title>27.10.2023</title>
+</head>
+<body>
+    <!-- task one -->
+    <h1>Форум</h1>
+    <form id="message-form">
+        <label for="author">Автор:</label>
+        <input type="text" id="author" required>
+        <br>
+        <label for="message">Повідомлення:</label>
+        <textarea id="message" rows="4" required></textarea>
+        <br>
+        <button type="submit">Додати повідомлення</button>
+    </form>
+    <ul id="message-list"></ul>
+
+    <!-- task two -->
+    <h1>Пройдіть тест</h1>
+    <div class="question">
+        <p>Питання 1: Яка столиця Франції?</p>
+        <input type="radio" name="q1" value="Париж">Париж
+        <input type="radio" name="q1" value="Лондон">Лондон
+    </div>
+
+    >
+    <div class="question">
+        <p>Питання 2: Скільки планет в Сонячній системі?</p>
+        <input type="radio" name="q2" value="7">7
+        <input type="radio" name="q2" value="8">8
+    </div>
+
+    <button id="submit-button">Завершити тест</button>
+
+    <div id="result"></div>
+
+    <!-- task three -->
+    <h1>Введення стилізованого тексту</h1>
+
+    
+    <form id="text-form">
+        <label for="styled-text-input">Введіть текст:</label>
+        <input type="text" id="styled-text-input" required>
+        <button type="submit">Відобразити текст</button>
+    </form>
+
+    <div id="styled-text"></div>
+
+    <!-- task four -->
+    <h1>Магазин книг</h1>
+
+    <form id="book-order-form">
+        <label for="book-selection">Виберіть книгу:</label>
+        <select id="book-selection" required>
+            <option value="Книга 1">Книга 1</option>
+            <option value="Книга 2">Книга 2</option>
+            <option value="Книга 3">Книга 3</option>
+        </select>
+        <br>
+        <label for="quantity">Кількість:</label>
+        <input type="number" id="quantity" required>
+        <br>
+        <label for="name">Ім'я:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="delivery-date">Дата доставки:</label>
+        <input type="date" id="delivery-date" required>
+        <br>
+        <label for="delivery-address">Адреса доставки:</label>
+        <input type="text" id="delivery-address" required>
+        <br>
+        <label for="comment">Коментар:</label>
+        <textarea id="comment"></textarea>
+        <br>
+        <button type="submit">Замовити</button>
+    </form>
+
+
+    <!-- task five -->
+    <h1>Відмітити присутніх на парі</h1>
+
+    
+    <form id="attendance-form">
+        <label for="group">Група:</label>
+        <select id="group" required>
+            <option value="Група 1">Група 1</option>
+            <option value="Група 2">Група 2</option>
+        </select>
+        <br>
+        <label for="lecture">Пара:</label>
+        <select id="lecture" required>
+            <option value="Пара 1">Пара 1</option>
+            <option value="Пара 2">Пара 2</option>
+        </select>
+        <br>
+        <label for="topic">Тема заняття:</label>
+        <input type="text" id="topic" required>
+        <br>
+        <label for="attendees">Присутні:</label>
+        <input type="text" id="attendees" required>
+        <br>
+        <button type="submit">Відмітити</button>
+    </form>
+
+    
+    <h2>Відмічені пари:</h2>
+    <ul id="attendance-list"></ul>
+    <script src="/scripts/index.js"></script>
+
+    <!-- task six -->
+    <h1>Забронювання квитків на поїзд</h1>
+
+    
+    <form id="booking-form">
+        <label for="destination">Напрямок поїзда:</label>
+        <select id="destination" required>
+            <option value="Київ - Львів">Київ - Львів</option>
+            <option value="Львів - Одеса">Львів - Одеса</option>
+        </select>
+        <br>
+        <label for="travel-date">Дата поїздки:</label>
+        <input type="date" id="travel-date" required>
+        <br>
+        <label for="seats">Місця для бронювання (номери через кому):</label>
+        <input type="text" id="seats" required>
+        <br>
+        <button type="submit">Забронювати квитки</button>
+    </form>
+
+    
+    <h2>Заброньовані квитки:</h2>
+    <ul id="bookings-list"></ul>
+
+</body>
+</html>
