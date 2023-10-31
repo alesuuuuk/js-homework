@@ -3,18 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/index.css">
-    <title>homework 16.10.2023</title>
+    <link rel="stylesheet" href="/style/index.css">
+    <title>Document</title>
 </head>
 <body>
-    hello world
-
-    <!-- task one -->
-    <h1>Введіть ваше ім'я:</h1>
-    <form id="form__name">
-        <input type="text" id="nameInput">
-        <input type="submit" value="submit">
-    </form>
     
-<script src="scripts/index.js"></script></body>
+</head>
+<body>
+    <!-- task one  -->
+    <h1>Введення імені без цифр</h1>
+    <label for="nameInput">Введіть ім'я:</label>
+    <input type="text" id="nameInput">
+    <!-- task two -->
+    <h1>Модальне вікно</h1>
+    <button id="openButton">Відкрити</button>
+
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p>Це модальне вікно.</p>
+            <button id="closeButton">Закрити</button>
+        </div>
+    </div>
+
+    <!-- task three -->
+
+    <!-- <div class="football-field" onclick="moveBall(event)">
+        <div class="football" id="football"></div>
+    </div>
+    <script>
+        function moveBall(event) {
+            const ball = document.getElementById("football");
+            const field = document.querySelector(".football-field");
+
+            
+            const clickX = event.clientX - field.getBoundingClientRect().left;
+            const clickY = event.clientY - field.getBoundingClientRect().top;
+
+            
+            const ballX = clickX - ball.clientWidth / 2;
+            const ballY = clickY - ball.clientHeight / 2;
+
+            
+            if (ballX < 0) ballX = 0;
+            if (ballY < 0) ballY = 0;
+            if (ballX > field.clientWidth - ball.clientWidth) ballX = field.clientWidth - ball.clientWidth;
+            if (ballY > field.clientHeight - ball.clientHeight) ballY = field.clientHeight - ball.clientHeight;
+
+            
+            ball.style.transform = `translate(${ballX}px, ${ballY}px)`;
+        }
+    </script> -->
+
+    <!-- task five  -->
+    <ul class="book-list">
+        <li class="book" onclick="toggleSelected(this)">Книга 1</li>
+        <li class="book" onclick="toggleSelected(this)">Книга 2</li>
+        <li class="book" onclick="toggleSelected(this)">Книга 3</li>
+        <li class="book" onclick="toggleSelected(this)">Книга 4</li>
+    </ul>
+
+    <script src="/scripts/index.js"></script>
+</body>
 </html>

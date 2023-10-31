@@ -1,0 +1,58 @@
+/* task two */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* task three */
+.football-field {
+    width: 100vw;
+    height: 100vh;
+    background-color: green;
+    position: relative;
+}
+
+
+.football {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 50%; /* Робимо м'яч круглим */
+    position: absolute;
+    transition: transform 0.5s; /* Додаємо плавну анімацію */
+}
+
+/* task five */
+.book-list {
+    list-style: none;
+    padding: 0;
+}
+
+.book {
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Клас для виділення книги */
+.selected {
+    background-color: orange;
+}
